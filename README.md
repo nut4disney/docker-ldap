@@ -1,8 +1,8 @@
 # Dockerized OpenLDAP
 Dockerized OpenLDAP using Osixia's OpenLDAP with phpLDAPAdmin
 
-## How to use OpenLDAP
-This will create a docker container for OpenLDAP. Settings have been preconfigured to allow this to run quickly. Here are the basic configuration items in the docker-compose-yml:
+## Configuring OpenLDAP and phpLDAPAdmin
+The purpose of this docker composer is to create a docker container for OpenLDAP. Settings have been preconfigured to allow this to run quickly. Here are the basic configuration items in the docker-compose-yml:
 
 ```
       LDAP_BASE_DN: "dc=test,dc=com"
@@ -42,12 +42,12 @@ For the phpLdapAdmin, the docker-compose.yml file can also be edited to change t
       - "8389:80"
 ```
 
-## Creating the Servers
+## Creating OpenLDAP and phpLDAPAdmin
 Create the OpenLDAP Server and the phpLdapAdmin by executing Docker compose:
 
 	docker-compose up -d
 
-# Using phpLdapAdmin
+## Using phpLdapAdmin
 
 Using the docker-compose.yml provided here, you should be able to access the phpLDAPadmin web page using the following URL:
 
@@ -56,7 +56,7 @@ Using the docker-compose.yml provided here, you should be able to access the php
 ![Image showing phpLDAPadmin main login page](ldap-screenshot.png "phpLDAPadmin")
 
 
-## Anonymouse vs. Authentictaed Access
+## Anonymous vs. Authenticated Access
 
 Access to phpLDAPadmin can be anonmous or authenticated. For anonymous access, simply click the login link and check the anonymous checkbox before clicking teh "Authenticate" button. For authenticated access, use the 'admin' user distinguished name (DN). The DN for the admin provided in this example is;
 
