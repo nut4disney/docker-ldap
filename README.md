@@ -58,9 +58,11 @@ To remove the containers, simply execute the docker container rm command:
 
 	docker container rm test-ldap phpldapadmin
 
-## Looking at th elogs
-docker logs test-ldap
-docker logs phpldapadmin
+## Container Logs
+To view the container logs, use the following commands:
+
+	docker logs test-ldap
+	docker logs phpldapadmin
 
 
 
