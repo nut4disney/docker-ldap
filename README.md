@@ -50,7 +50,7 @@ Create the OpenLDAP Server and the phpLdapAdmin by executing Docker compose:
 
 # Using phpLdapAdmin
 
-Information on running phpLdapAdmin can be found at [docker-phpLDAPadmin Github page][https://github.com/osixia/docker-phpLDAPadmin].
+Information on running phpLdapAdmin can be found at [docker-phpLDAPadmin Github page](https://github.com/osixia/docker-phpLDAPadmin).
 
 
 # Diagnostics and Uninstalling Containers
