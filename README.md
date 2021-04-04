@@ -4,8 +4,8 @@ Dockerized OpenLDAP using Osixia
 # How to use
 This will create a docker container for OpenLDAP. Settings have been preconfigured to allow this to run quickly. Here are the basic configuration items:
 
-docker-compose.yml
 ```
+docker-compose.yml
       LDAP_BASE_DN: "dc=test,dc=com"
       LDAP_ADMIN_PASSWORD: "admin"
 
@@ -16,7 +16,6 @@ docker-compose.yml
 
 OpenLDAP is configurd to listen on port 389, but exposes the LDAP outside the container on port 3389. Similarly, the phpLdapAdmin listens on port 80 within the container, but is exposed as port 8389. To change these ports, please look in the docker-compose.yml file:
 
-docker-compose.yml
 ```
 services:
   openldap:
@@ -29,9 +28,10 @@ services:
       - "3636:636"
 ```
  
-Notice that the port 636 is the default TlS port and it is exposed on 3636 outside the container to the host. By default, the docker-compose.yml disables TLS.
+Take note that the port 636 is the default TlS port and it is exposed on 3636 outside the container to the host. By default, the docker-compose.yml disables TLS.
 
-docker-compose.yml
+For the phpLdapAdmin, the docker-compose.yml file can also be edited to change the ports used;
+
 ```
   phpldapadmin:
     image: osixia/phpldapadmin:latest
