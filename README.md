@@ -48,6 +48,13 @@ Create the OpenLDAP Server and the phpLdapAdmin by executing Docker compose:
 
 	docker-compose up -d
 
+# Using phpLdapAdmin
+
+Information on running phpLdapAdmin can be found at [docker-phpLDAPadmin Github page][https://github.com/osixia/docker-phpLDAPadmin].
+
+
+# Diagnostics and Uninstalling Containers
+
 ## Stopping the LDAP Server
 To stop the OpenLDAP server's container simply issue the following command;
 
