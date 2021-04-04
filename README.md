@@ -11,7 +11,7 @@ NOTE: TLS/SSL is disabled.
 
 OpenLDAP is configurd to listen on port 389, but exposes the LDAP outside the container on port 3389. Similarly, the phpLdapAdmin listens on port 80 within the container, but is exposed as port 8389. To change these ports, please look in the docker-compose.yml file:
 
-'''
+```
 services:
   openldap:
     image: osixia/openldap:1.2.3
@@ -21,10 +21,11 @@ services:
     ports:
       - "3389:389"
       - "3636:636"
-'''
+```
+ 
 Notice that the port 636 is the default TlS port and it is exposed on 3636 outside the container to the host. By default, the docker-compose.yml disables TLS.
 
-'''
+```
   phpldapadmin:
     image: osixia/phpldapadmin:latest
     container_name: phpldapadmin
@@ -33,14 +34,12 @@ Notice that the port 636 is the default TlS port and it is exposed on 3636 outsi
 .
     ports:
       - "8389:80"
-'''
+```
 
 ## Creating the Servers
 Create the OpenLDAP Server and the phpLdapAdmin by executing Docker compose:
 
-'''
-docker-compose up -d
-'''
+	docker-compose up -d
 
 ## Stopping the LDAP Server
 docker container stop test-ldap
