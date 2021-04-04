@@ -1,11 +1,10 @@
-# docker-ldap
-Dockerized OpenLDAP using Osixia
+# Dockerized OpenLDAP
+Dockerized OpenLDAP using Osixia's OpenLDAP with phpLDAPAdmin
 
-# How to use
-This will create a docker container for OpenLDAP. Settings have been preconfigured to allow this to run quickly. Here are the basic configuration items:
+## How to use OpenLDAP
+This will create a docker container for OpenLDAP. Settings have been preconfigured to allow this to run quickly. Here are the basic configuration items in the docker-compose-yml:
 
 ```
-docker-compose.yml
       LDAP_BASE_DN: "dc=test,dc=com"
       LDAP_ADMIN_PASSWORD: "admin"
 
