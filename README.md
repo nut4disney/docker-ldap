@@ -50,7 +50,21 @@ Create the OpenLDAP Server and the phpLdapAdmin by executing Docker compose:
 
 # Using phpLdapAdmin
 
-Information on running phpLdapAdmin can be found at [docker-phpLDAPadmin Github page](https://github.com/osixia/docker-phpLDAPadmin).
+Using the docker-compose.yml provided here, you should be able to access the phpLDAPadmin web page using the following URL:
+
+	http://<hostname>:8389
+
+## Anonymouse vs. Authentictaed Access
+
+Access to phpLDAPadmin can be anonmous or authenticated. For anonymous access, simply click the login link and check the anonymous checkbox before clicking teh "Authenticate" button. For authenticated access, use the 'admin' user distinguished name (DN). The DN for the admin provided in this example is;
+
+	cn=admin, dc=test, dc=com
+
+The password is specified in the docker-compose.yml. The default value, provided in this example docker-compose.yml file, is:
+
+	admin
+
+For additional information on running phpLdapAdmin can be found at [docker-phpLDAPadmin Github page](https://github.com/osixia/docker-phpLDAPadmin).
 
 
 # Diagnostics and Uninstalling Containers
